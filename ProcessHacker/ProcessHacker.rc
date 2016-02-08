@@ -153,6 +153,7 @@ BEGIN
         MENUITEM "Inspect executable file...",  ID_TOOLS_INSPECTEXECUTABLEFILE
         MENUITEM "Pagefiles",                   ID_TOOLS_PAGEFILES
         MENUITEM "Start Task Manager",          ID_TOOLS_STARTTASKMANAGER
+        MENUITEM "Start Resource Monitor",      ID_TOOLS_STARTRESOURCEMONITOR
     END
     POPUP "&Users"
     BEGIN

@@ -942,6 +942,17 @@ VOID PhMwpOnCommand(
             }
         }
         break;
+    case ID_TOOLS_STARTRESOURCEMONITOR:
+        {
+            PPH_STRING systemDirectory;
+            PPH_STRING perfmonFileName;
+
+            systemDirectory = PH_AUTO( PhGetSystemDirectory() );
+            perfmonFileName = PH_AUTO( PhConcatStrings2( systemDirectory->Buffer, L"\\perfmon.exe" ) );
+
+            PhShellExecute( PhMainWndHandle, perfmonFileName->Buffer, L"/res" );
+        }
+        break;
     case ID_USER_CONNECT:
         {
             PhUiConnectSession(PhMainWndHandle, SelectedUserSessionId);
